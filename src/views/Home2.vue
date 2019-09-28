@@ -1,23 +1,30 @@
 <template>
-    <div style="height:100vh;background-color: #2c3e50;overflow-y: hidden;" class="row">
+    <div style="background-color: #2c3e50;" class="row">
 
         <marquee direction="down" class="col-2 col-sm-2 col-md-1 col-xs-1 col-lg-1 text-center" behavior="scroll">
             <template v-for="i in 4">
-                <img src="https://img.icons8.com/color/30/000000/party-baloon.png"><br><br>
-                <img src="https://img.icons8.com/color/30/000000/party-baloons.png"
+                <img src="https://img.icons8.com/color/30/000000/party-baloon.png" alt="balloon"><br><br>
+                <img src="https://img.icons8.com/color/30/000000/party-baloons.png" alt="balloon"
                      class="group-balloon "><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" class=""><br><br>
+                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon" class=""><br><br>
                 <img src="https://img.icons8.com/dusk/30/000000/party-baloons.png"
-                     class="group-balloon "><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png"><br><br>
-                <img src="https://img.icons8.com/cotton/30/000000/party-baloons.png" class="group-balloon"><br><br>
+                     class="group-balloon " alt="balloon"><br><br>
+                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon"><br><br>
+                <img src="https://img.icons8.com/cotton/30/000000/party-baloons.png" alt="balloon"
+                     class="group-balloon"><br><br>
             </template>
         </marquee>
 
         <div class="col-8 col-sm-8 col-md-3 col-lg-10 col-xs-10">
 
+            <div class="row">
+                <h4 class="text-white text-center">
+                    Wishing you a day filled with happiness and a year filled with joy ...
+                </h4>
+            </div>
+
             <div class="row justify-content-center">
-                <img src="../../public/crackers.gif" class="align-items-center"/>
+                <img src="../../public/crackers.gif" class="align-items-center" alt="crackers"/>
             </div>
 
             <div class="row justify-content-center">
@@ -32,7 +39,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <img src="https://img.icons8.com/color/60/000000/birthday-cake.png" class="cake">
+                <img src="https://img.icons8.com/color/60/000000/birthday-cake.png" class="cake" alt="cake">
             </div>
 
             <div class="row justify-content-center move">
@@ -41,19 +48,31 @@
                 </div>
             </div>
 
+            <div style="margin-top: 5vh">
+                <h4 class="text-white font-weight-bold">
+                    Sending you smiles for every moment of your special day…Have a wonderful time and a very happy
+                    birthday!
+                </h4>
+
+                <h3 style="color: deepskyblue; float: right">
+                    From RAVI...
+                </h3>
+            </div>
+
         </div>
 
         <marquee direction="up" class="col-2 col-sm-2 col-md-1 col-xs-1 col-lg-1 text-center" behavior="scroll"
                  scrolldelay="5">
             <template v-for="i in 4">
-                <img src="https://img.icons8.com/color/30/000000/party-baloon.png"><br><br>
-                <img src="https://img.icons8.com/color/30/000000/party-baloons.png"
+                <img src="https://img.icons8.com/color/30/000000/party-baloon.png" alt="balloon"><br><br>
+                <img src="https://img.icons8.com/color/30/000000/party-baloons.png" alt="balloon"
                      class="group-balloon "><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" class=""><br><br>
-                <img src="https://img.icons8.com/dusk/30/000000/party-baloons.png"
+                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon" class=""><br><br>
+                <img src="https://img.icons8.com/dusk/30/000000/party-baloons.png" alt="balloon"
                      class="group-balloon "><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png"><br><br>
-                <img src="https://img.icons8.com/cotton/30/000000/party-baloons.png" class="group-balloon"><br><br>
+                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon"><br><br>
+                <img src="https://img.icons8.com/cotton/30/000000/party-baloons.png" alt="balloon"
+                     class="group-balloon"><br><br>
             </template>
         </marquee>
     </div>
@@ -85,29 +104,31 @@
 
         mounted() {
 
-            let anime = this.$anime({
+            /* let anime = this.$anime()*/
+            this.$anime({
                 targets: 'div.box',
                 translateY: [
                     {value: 100, duration: 1000},
                     {value: 0, duration: 1000},
                 ],
+                scale: [1, 2, 3, 1],
                 rotate: {
                     value: '1turn',
                     easing: 'easeInOutSine'
                 },
                 loop: true,
 
-                delay(element, index, totalElements) {
+                delay(element, index) {
                     return (index + 1) * 2000;
                 }
-            })
+            });
 
             this.$anime({
                 targets: '.balloon',
                 translateY: {value: 200, duration: 2000},
                 loop: true,
                 easing: 'linear',
-            })
+            });
 
             this.$anime({
                 targets: '.balloon2',
@@ -117,7 +138,7 @@
                 ],
                 loop: true,
                 easing: 'linear'
-            })
+            });
 
             this.$anime({
                 targets: '.cake',
@@ -148,8 +169,8 @@
                 translateZ: 0,
                 easing: "easeOutExpo",
                 duration: 950,
-                delay: (el, i, size) => {
-                    return 100*i;
+                delay: (el, i) => {
+                    return 100 * i;
                 },
                 loop: true
             }).add({
@@ -163,7 +184,7 @@
 
 <style scoped>
 
-    .box-space, .box {
+    .box {
         display: inline-block;
         width: 20px;
         height: 20px;
@@ -209,6 +230,18 @@
         font-family: 'Playfair Display', serif;
         font-weight: 400;
         color: #d65027;
+    }
+
+    h4::before {
+        content: open-quote;
+        color: #0fff45;
+        font-size: 32px;
+    }
+
+    h4::after {
+        content: close-quote;
+        color: #0fff45;
+        font-size: 32px;
     }
 
 </style>

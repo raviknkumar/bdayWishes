@@ -6,7 +6,7 @@
 
             <div class="col-4 col-sm-3 col-md-2 col-lg-2 col-xl-2 text-center" id="logo-gift">
                 <img src="https://img.icons8.com/color/100/000000/gift.png" id="logo-hexagon"
-                     style="width: max-content;">
+                     style="width: max-content;" alt="gift">
             </div>
 
             <div class="col-6 col-sm-4 col-md-4 col-xl-3 col-lg-2 align-middle"
@@ -24,9 +24,6 @@
 
             </div>
         </div>
-
-        <img src="https://img.icons8.com/color/50/000000/gift.png" class="rotateImg"
-             style="width: max-content;margin-top: -100px">
 
     </div>
 
@@ -86,7 +83,7 @@
                 duration: 1000,
                 easing: 'easeOutExpo',
                 offset: 1000
-            })
+            });
 
             this.$anime({
                 targets: ".rotateImg",
