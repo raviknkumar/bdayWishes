@@ -1,34 +1,32 @@
 import Vue from "vue";
 import Vuex from "vuex";
 // import createPersistedState from 'vuex-persistedstate'
-import * as Cookies from 'js-cookie'
+import * as Cookies from "js-cookie";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-
-  state:{
-    name:null
+  state: {
+    name: null
   },
 
-  getters:{
-    getName : state => {
+  getters: {
+    getName: state => {
       var name = state.name;
       if (!name) {
-        name =  Cookies.getJSON('name')
+        name = Cookies.getJSON("name");
       }
-      if(!name)
-        name = "My Dear"
+      if (!name) name = "My Dear";
       return name;
     }
   },
 
-  mutations:{
+  mutations: {
     setName: (state, name) => {
-      Cookies.set('name', name);
-      state.name = name
+      Cookies.set("name", name);
+      state.name = name;
     }
-  },
-})
+  }
+});
 
 export default store;

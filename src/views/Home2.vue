@@ -1,86 +1,136 @@
 <template>
-    <div style="background-color: #2c3e50;" class="row">
+  <div style="background-color: #2c3e50;" class="row">
+    <marquee
+      direction="down"
+      class="col-2 col-sm-2 col-md-1 col-xs-1 col-lg-1 text-center"
+      behavior="scroll"
+    >
+      <template v-for="i in 4">
+        <img
+          src="https://img.icons8.com/color/30/000000/party-baloon.png"
+          alt="balloon"
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/color/30/000000/party-baloons.png"
+          alt="balloon"
+          class="group-balloon "
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/officel/30/000000/party-baloon.png"
+          alt="balloon"
+          class=""
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/dusk/30/000000/party-baloons.png"
+          class="group-balloon "
+          alt="balloon"
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/officel/30/000000/party-baloon.png"
+          alt="balloon"
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/cotton/30/000000/party-baloons.png"
+          alt="balloon"
+          class="group-balloon"
+        /><br /><br />
+      </template>
+    </marquee>
 
-        <marquee direction="down" class="col-2 col-sm-2 col-md-1 col-xs-1 col-lg-1 text-center" behavior="scroll">
-            <template v-for="i in 4">
-                <img src="https://img.icons8.com/color/30/000000/party-baloon.png" alt="balloon"><br><br>
-                <img src="https://img.icons8.com/color/30/000000/party-baloons.png" alt="balloon"
-                     class="group-balloon "><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon" class=""><br><br>
-                <img src="https://img.icons8.com/dusk/30/000000/party-baloons.png"
-                     class="group-balloon " alt="balloon"><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon"><br><br>
-                <img src="https://img.icons8.com/cotton/30/000000/party-baloons.png" alt="balloon"
-                     class="group-balloon"><br><br>
-            </template>
-        </marquee>
+    <div class="col-8 col-sm-8 col-md-3 col-lg-10 col-xs-10">
+      <div class="row">
+        <h4 class="text-white text-center">
+          Wishing you a day filled with happiness and a year filled with joy ...
+        </h4>
+      </div>
 
-        <div class="col-8 col-sm-8 col-md-3 col-lg-10 col-xs-10">
+      <div class="row justify-content-center">
+        <img
+          src="../../public/crackers.gif"
+          class="align-items-center"
+          alt="crackers"
+        />
+      </div>
 
-            <div class="row">
-                <h4 class="text-white text-center">
-                    Wishing you a day filled with happiness and a year filled with joy ...
-                </h4>
-            </div>
-
-            <div class="row justify-content-center">
-                <img src="../../public/crackers.gif" class="align-items-center" alt="crackers"/>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="box" :class="colors[i%4]" v-for="(char,i) in happy">
-                    <h3>{{char}}</h3>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="box" :class="colors[i%4]" v-for="(char,i) in birthday">
-                    <h3>{{char}}</h3>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <img src="https://img.icons8.com/color/60/000000/birthday-cake.png" class="cake" alt="cake">
-            </div>
-
-            <div class="row justify-content-center move">
-                <div class="letter1" v-for="char in name2">
-                    {{char}}
-                </div>
-            </div>
-
-            <div style="margin-top: 5vh">
-                <h4 class="text-white font-weight-bold">
-                    Sending you smiles for every moment of your special day…Have a wonderful time and a very happy
-                    birthday!
-                </h4>
-
-                <h3 style="color: deepskyblue; float: right">
-                    From RAVI...
-                </h3>
-            </div>
-
+      <div class="row justify-content-center">
+        <div class="box" :class="colors[i % 4]" v-for="(char, i) in happy">
+          <h3>{{ char }}</h3>
         </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="box" :class="colors[i % 4]" v-for="(char, i) in birthday">
+          <h3>{{ char }}</h3>
+        </div>
+      </div>
 
-        <marquee direction="up" class="col-2 col-sm-2 col-md-1 col-xs-1 col-lg-1 text-center" behavior="scroll"
-                 scrolldelay="5">
-            <template v-for="i in 4">
-                <img src="https://img.icons8.com/color/30/000000/party-baloon.png" alt="balloon"><br><br>
-                <img src="https://img.icons8.com/color/30/000000/party-baloons.png" alt="balloon"
-                     class="group-balloon "><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon" class=""><br><br>
-                <img src="https://img.icons8.com/dusk/30/000000/party-baloons.png" alt="balloon"
-                     class="group-balloon "><br><br>
-                <img src="https://img.icons8.com/officel/30/000000/party-baloon.png" alt="balloon"><br><br>
-                <img src="https://img.icons8.com/cotton/30/000000/party-baloons.png" alt="balloon"
-                     class="group-balloon"><br><br>
-            </template>
-        </marquee>
+      <div class="row justify-content-center">
+        <img
+          src="https://img.icons8.com/color/60/000000/birthday-cake.png"
+          class="cake"
+          alt="cake"
+        />
+      </div>
+
+      <div class="row justify-content-center move">
+        <div class="letter1" v-for="char in name2">
+          {{ char }}
+        </div>
+      </div>
+
+      <div style="margin-top: 5vh">
+        <h4 class="text-white font-weight-bold">
+          Sending you smiles for every moment of your special day…Have a
+          wonderful time and a very happy birthday!
+        </h4>
+
+        <h3 style="color: deepskyblue; float: right">
+          From RAVI...
+        </h3>
+      </div>
     </div>
 
+    <marquee
+      direction="up"
+      class="col-2 col-sm-2 col-md-1 col-xs-1 col-lg-1 text-center"
+      behavior="scroll"
+      scrolldelay="5"
+    >
+      <template v-for="i in 4">
+        <img
+          src="https://img.icons8.com/color/30/000000/party-baloon.png"
+          alt="balloon"
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/color/30/000000/party-baloons.png"
+          alt="balloon"
+          class="group-balloon "
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/officel/30/000000/party-baloon.png"
+          alt="balloon"
+          class=""
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/dusk/30/000000/party-baloons.png"
+          alt="balloon"
+          class="group-balloon "
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/officel/30/000000/party-baloon.png"
+          alt="balloon"
+        /><br /><br />
+        <img
+          src="https://img.icons8.com/cotton/30/000000/party-baloons.png"
+          alt="balloon"
+          class="group-balloon"
+        /><br /><br />
+      </template>
+    </marquee>
+  </div>
 </template>
 
 <script>
-    /* eslint-disable */
+/* eslint-disable */
 
     import {mapGetters} from 'vuex';
 

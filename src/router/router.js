@@ -24,8 +24,7 @@ export default new Router({
     {
       path: "/surprise",
       name: "surprise",
-      component: () =>
-          import( "../views/Home2.vue")
+      component: () => import("../views/Home2.vue")
     }
   ]
 });
