@@ -83,7 +83,7 @@
                     wonderful time and a very happy birthday!
                 </h4>
 
-                <h3 style="color: deepskyblue;float: right" >
+                <h3 style="color: deepskyblue;float: right">
                     From RAVI...
                 </h3>
             </div>
@@ -99,31 +99,31 @@
                 <img
                         src="https://img.icons8.com/color/30/000000/party-baloon.png"
                         alt="balloon" :id="_id"
-                /><br /><br />
+                /><br/><br/>
                 <img
                         src="https://img.icons8.com/color/30/000000/party-baloons.png"
                         alt="balloon" :id="_id"
                         class="group-balloon "
-                /><br /><br />
+                /><br/><br/>
                 <img
                         src="https://img.icons8.com/officel/30/000000/party-baloon.png"
                         alt="balloon" :id="_id"
                         class=""
-                /><br /><br />
+                /><br/><br/>
                 <img
                         src="https://img.icons8.com/dusk/30/000000/party-baloons.png"
                         alt="balloon" :id="_id"
                         class="group-balloon "
-                /><br /><br />
+                /><br/><br/>
                 <img
                         src="https://img.icons8.com/officel/30/000000/party-baloon.png"
                         alt="balloon" :id="_id"
-                /><br /><br />
+                /><br/><br/>
                 <img
                         src="https://img.icons8.com/cotton/30/000000/party-baloons.png"
                         alt="balloon" :id="_id"
                         class="group-balloon"
-                /><br /><br />
+                /><br/><br/>
             </template>
         </marquee>
     </div>
@@ -160,7 +160,7 @@
                     {value: 100, duration: 1000},
                     {value: 0, duration: 1000},
                 ],
-                translateZ: [1000,0],
+                translateZ: [1000, 0],
                 // scale: [1, 2, 3, 1],
                 rotate: {
                     value: '1turn',
@@ -293,8 +293,8 @@
         color: #0fff45;
         font-size: 32px;
     }
-    
-    h4{
+
+    h4 {
         padding-left: 10px;
         padding-right: 10px;
     }
