@@ -52,7 +52,8 @@
                 string: "HAPPY BIRTHDAY",
                 colors: ["red", "blue", "yellow", "green"],
                 colorIndex: 0,
-                name: this.$route.query.name != null ? this.$route.query.name : "My Dear"
+                name: this.$route.query.name != null ? this.$route.query.name : "My Dear",
+                from: this.$route.query.f != null ? this.$route.query.f : "Your Dear"
             };
         },
         mounted() {
@@ -120,7 +121,8 @@
         methods: {
             navigate() {
                 this.$store.commit("setName", this.name);
-                this.$router.push({name: "surprise", params: {name: this.name}});
+                this.$store.commit("setFrom", this.from);
+                this.$router.push({name: "surprise", params: {name: this.name, from: this.from}});
             }
         }
     };

@@ -84,7 +84,7 @@
                 </h4>
 
                 <h3 style="color: deepskyblue;float: right">
-                    From RAVI...
+                    From {{from}}...
                 </h3>
             </div>
         </div>
@@ -147,7 +147,8 @@
 
         computed: {
             ...mapGetters({
-                name2: 'getName'
+                name2: 'getName',
+                from: 'getFrom'
             })
         },
 
