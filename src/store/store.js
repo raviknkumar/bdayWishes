@@ -18,6 +18,14 @@ const store = new Vuex.Store({
       }
       if (!name) name = "My Dear";
       return name;
+    },
+    getFrom: state => {
+      var from = state.from;
+      if (!from) {
+        from = Cookies.getJSON("from");
+      }
+      if (!from) from = "Your Dear";
+      return from;
     }
   },
 
@@ -25,6 +33,10 @@ const store = new Vuex.Store({
     setName: (state, name) => {
       Cookies.set("name", name);
       state.name = name;
+    },
+    setFrom: (state, name) => {
+      Cookies.set("from", name);
+      state.from = name;
     }
   }
 });
